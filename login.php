@@ -18,8 +18,8 @@ if (isset($_POST['login'])) {
 	//login part
 
 //login variables
-$email = mysqli_real_escape_string($_POST['email']);
-$password1 = mysqli_real_escape_string($_POST['password']);
+$email = mysqli_real_escape_string($conn,$_POST['email']);
+$password1 = mysqli_real_escape_string($conn,$_POST['password']);
 
 $query = "SELECT * FROM user WHERE email='$email' AND password='$password1'";
 $result = mysqli_query($conn,$query);
@@ -32,7 +32,7 @@ if (mysqli_num_rows($result) == 1) {
   	  header('location: index.php');
 } else {
 	// code...
-	echo "Login credentials are wrong"
+	echo "Login credentials are wrong";
 }
 
 }
