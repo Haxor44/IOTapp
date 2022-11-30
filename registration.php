@@ -31,7 +31,7 @@ if ($conn->connect_error) {
 if ($conn->query($sql) === True) {
 	// code...
 	echo "New user added!!!";
-	$_SESSION['username'] = $username;
+	$_SESSION['username'] = $email;
   $_SESSION['success'] = "Registration is successful!!!";
 }
 else{
