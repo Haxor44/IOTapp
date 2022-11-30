@@ -4,7 +4,7 @@ $username = "sql6582103";
 $password = "P521npUsUF";
 
 // Create connection to the database
-  $conn = new mysqli($servername, $username, $password);
+  $conn = new mysqli($servername, $username, $password,'sql6582103');
 
 // Check connection
 if ($conn->connect_error) {
@@ -19,7 +19,8 @@ if (isset($_POST['login'])) {
 
 //login variables
 $email = mysqli_real_escape_string($conn,$_POST['email']);
-$password1 = mysqli_real_escape_string($conn,$_POST['password']);
+$password = mysqli_real_escape_string($conn,$_POST['password']);
+$password1 = md5($password);
 
 $query = "SELECT * FROM user WHERE email='$email' AND password='$password1'";
 $result = mysqli_query($conn,$query);
@@ -27,9 +28,8 @@ $result = mysqli_query($conn,$query);
 if (mysqli_num_rows($result) == 1) {
 	// code...
 			echo "Login Successful";
-			$_SESSION['username'] = $email;
-  	  $_SESSION['success'] = "You are now logged in";
-  	  header('location: index.php');
+			header('location: index.php');
+			
 } else {
 	// code...
 	echo "Login credentials are wrong";

@@ -1,43 +1,29 @@
-<?php 
-session_start();
-$servername = "sql6.freemysqlhosting.net";
-$username = "sql6582103";
-$password = "P521npUsUF";
+<?php
 
-// Create connection to the database
-  $conn = new mysqli($servername, $username, $password);
 
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-echo "Connected successfully";
+// connect to the database
+$db = mysqli_connect('sql6.freemysqlhosting.net', 'sql6582103', 'P521npUsUF', 'sql6582103');
 
-$f_name=$_POST['f_name'];
-$l_name=$_POST['l_name'];
-$email = $_POST['email'];
-$password = $_POST['password'];
-$phone = $_POST['phone'];
+// REGISTER USER
 if (isset($_POST['register'])) {
-	// code...
+  // receive all input values from the form
+  $f_name = mysqli_real_escape_string($db, $_POST['f_name']);
+  $l_name = mysqli_real_escape_string($db, $_POST['l_name']);
+  $email = mysqli_real_escape_string($db, $_POST['email']);
+  $password_1 = mysqli_real_escape_string($db, $_POST['password']);
+  $phone = mysqli_real_escape_string($db, $_POST['phone']);
 
-$sql = "INSERT INTO VALUES(f_name,l_name,email,password,phone), ($f_name,$l_name,$email,$password,$phone)";
+  
 
-if ($conn->connect_error) {
-	// code...
-	die("Connection Failed!!!".$conn->connect_error);
+
+  // Finally, register user if there are no errors in the form
+
+  	$password = md5($password_1);//encrypt the password before saving in the database
+  	$query = "INSERT INTO user (f_name,l_name, email, password,phone) 
+  			  VALUES('$f_name','$l_name', '$email', '$password','$phone')";
+  	mysqli_query($db, $query);
+    echo "User added!!!";
+    header('location: login.html');
+  
 }
-
-if ($conn->query($sql) === True) {
-	// code...
-	echo "New user added!!!";
-	$_SESSION['username'] = $email;
-  $_SESSION['success'] = "Registration is successful!!!";
-}
-else{
-	"User could not be added";
-}
-}
-
-
- ?>
+?>
