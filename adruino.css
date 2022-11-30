@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  width: 100%;
+}
+
+.nav-links {
+  color: #404040;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li.nav-links a:hover {
+  text-decoration: underline;
+}
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 400px) {
+ 
+ li.nav-links a {
+    display: none;
+  }
+  }
+
+.percentage-bar {
+    background: #fff;
+    display: block;
+    height: 35px;
+    margin-bottom: 15px;
+    position: relative;
+    transition: 0.4s linear;
+    -moz-transition: 0.4s linear;
+    -ms-transition: 0.4s linear;
+    -o-transition: 0.4s linear;
+    -webkit-transition: 0.4s linear;
+    transition-property: width, background-color;
+    -moz-transition-property: width, background-color;
+    -ms-transition-property: width, background-color;
+    -o-transition-property: width, background-color;
+    -webkit-transition-property: width, background-color;
+    width: 40%;
+}
+.bar {
+    height: 35px;
+    width: 0px;
+}
+
+.percent {
+    color: #ffffff;
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 20px;
+    height: 35px;
+    line-height: 35px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+
+section.percentage-bar:first-child div.title { background: #9e1e1e; }
+section.percentage-bar:first-child div.bar { background: #dd2828; }
+
+section.percentage-bar:nth-child(2) div.title { background: #d35400; }
+section.percentage-bar:nth-child(2) div.bar { background: #e67e22; }
+
+section.percentage-bar:nth-child(3) div.title { background: #27ae60; }
+section.percentage-bar:nth-child(3) div.bar { background:  #2ecc71; }
+
+section.percentage-bar:nth-child(4) div.title { background: #2980b9; }
+section.percentage-bar:nth-child(4) div.bar { background: #3498db; }
+
+section.percentage-bar:nth-child(5) div.title { background: #561e9e; }
+section.percentage-bar:nth-child(5) div.bar { background: #6f37db; }
+
+section.percentage-bar:last-child div.title { background: #333333; }
+section.percentage-bar:last-child div.bar { background: #525252; }
+

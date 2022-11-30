@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+    <div class="container">
+        <header>farmer registration</header>
+    
+        <form action="registration.php" method="POST">
+            <div class="farmers details">
+            <div class="input-box">
+            <span class="Details">First Name</span>
+            <input type="text" placeholder ="First Name" required name="f_name">
+            </div>
+            <div class="input-box">
+                   <span class="Details">Second Name</span>
+                    <input type="text" placeholder ="Second Name" required name="l_name">
+                    </div>
+             <div class="input-box">
+                 <span class="Details">Email</span>
+                <input type="email" placeholder ="Enter email" required name="email">
+            </div>
+            <div class="input-box">
+                 <span class="Details">Password</span>
+                <input type="password" placeholder ="Enter Password" required name="password">
+            </div>
+            <div class="input-box">
+                     <span class="Details">Phone Number</span>
+                    <input type="text" placeholder ="Phone number" required name="phone">
+                     </div> 
+            </div>
+            <div class="button">
+                <input  type="submit" value="Register" name="register">
+            </div>
+            OR  
+            <span><a href="login.html">Login</a></span> 
+        </form>
+     </div>
+</body>
+</html>
