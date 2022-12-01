@@ -20,18 +20,20 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="registration.html">Register</a></li>
+                <li><a href="">Moisture</a>  <?php 
+    
+    $data = $_POST['data'];
+    echo "Soil moisture level is:".$data;
+ 
+
+ ?></li>
                 
             </ul>
             <h1 class="logo">SoilApp</h1>
         </div>
     </nav>
-    <section id="data">
-        <?php 
-    
-    $data = $_POST['data'];
-    echo "Soil moisture level is:".$data;
-
- ?>
-    </section>
+    <main>
+      
+    </main>
 </body>
 </html>
