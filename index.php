@@ -1,47 +1,38 @@
-<?php 
-	session_start();
-	
- ?>
- <html>
-   <head>
-    <title>Soil Moisture App</title>
-   <header><h1>soi moisture monitor</h1>
-   </header>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./adruino.css">
-  </head>
-  
-  <body>
-  	<nav><ul><li><a href="login.html">Login</a></li><li><a href="registration.html">Register</a></li></ul></nav>
-    
-    The graph below represents percentage  of soil moisture in the tested soil against water level in the tested soil.
-    
-    <!-- graph-->  
-   <div id="container" style="width: 70%; height: 60%"></div>
-  <div class="wrapper">
-		  <h2>Flat & Responsive Percentage Bars</h2>
-		  <article>
-			    <section class="percentage-bar" data-percent="100%">
-				      <div class="title"><span>Item 1</span></div>
-				      <div class="bar"></div>
-				      <div class="percent">100%</div>
-			    </section> 
 
-			    <section class="percentage-bar" data-percent="50%">
-				      <div class="title"><span>Item 2</span></div>
-				      <div class="bar"></div>
-				      <div class="percent">50%</div>
-			    </section> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>SoilApp</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="#">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="registration.html">Register</a></li>
+                <li><a href="">Moisture:</a>  <?php 
+    
+    $data = $_POST['data'];
+    echo "Soil moisture level is:".$data;
 
-          <script type="text/javascript">
-            
-$(document).ready(function() {
-  $('.percentage-bar').each(function(){
-    $(this).find('.bar').animate({
-      width: $(this).attr('data-percent')
-    }, 6000);
-  });
-});
-          </script>
-     </body>
-    </html>
+ ?></li>
+                
+            </ul>
+            <h1 class="logo">SoilApp</h1>
+        </div>
+    </nav>
+    <section id="data">
+      
+    </section>
+</body>
+</html>
