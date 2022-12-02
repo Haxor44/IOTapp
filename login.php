@@ -29,6 +29,7 @@ $result = mysqli_query($conn,$query);
 if (mysqli_num_rows($result) == 1) {
 	// code...
 			echo "Login Successful";
+			$_SESSION["loggedin]=TRUE;
 			header('location: index.php');
 			
 } else {
