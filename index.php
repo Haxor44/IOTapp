@@ -19,33 +19,37 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>SoilApp</title>
 </head>
+
 <body>
-    <nav class="navbar">
-        <div class="navbar-container container">
-            <input type="checkbox" name="" id="">
-            <div class="hamburger-lines">
-                <span class="line line1"></span>
-                <span class="line line2"></span>
-                <span class="line line3"></span>
+    <header>
+        <div class="nav-wrapper">
+            <div class="logo-container">
+                <em>SoilApp</em>
             </div>
-            <ul class="menu-items">
-                <li><a href="#">Home</a></li>
-                <li><a href="login.html">Logout</a></li>
-                
-                <li><a href="">Moisture</a>  <?php 
+            <nav>
+                <input class="hidden" type="checkbox" id="menuToggle">
+                <label class="menu-btn" for="menuToggle">
+                    <div class="menu"></div>
+                    <div class="menu"></div>
+                    <div class="menu"></div>
+                </label>
+                <div class="nav-container">
+                    <ul class="nav-tabs">
+                        <li><a href="#">Home</a></li>
+                	<li><a href="login.html">Logout</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="center"> 
+        <h1>Soil moisture is: <?php 
     
     $data = $_POST['data'];
     echo "Soil moisture level is:".$data;
  
 
- ?></li>
-                
-            </ul>
-            <h1 class="logo">SoilApp</h1>
-        </div>
-    </nav>
-    <main>
-      
-    </main>
+ ?></h1>
+    </div> 
 </body>
 </html>
