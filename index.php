@@ -1,4 +1,16 @@
+<?php 
+  session_start(); 
 
+  if (!isset($_SESSION['loggedin'])) {
+    $_SESSION['msg'] = "You must log in first";
+    header('location: login.php');
+  }
+  if (isset($_GET['logout'])) {
+    session_destroy();
+    unset($_SESSION['loggedin']);
+    header("location: login.php");
+  }
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,8 +30,8 @@
             </div>
             <ul class="menu-items">
                 <li><a href="#">Home</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="registration.html">Register</a></li>
+                <li><a href="login.html">Logout</a></li>
+                
                 <li><a href="">Moisture</a>  <?php 
     
     $data = $_POST['data'];
