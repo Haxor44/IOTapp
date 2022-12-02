@@ -25,7 +25,7 @@
     echo "Soil moisture level is:".$data;
  
 
- ?</a></li>
+ ?></a></li>
             </ul>
             <h1 class="logo">SoilApp</h1>
         </div>
