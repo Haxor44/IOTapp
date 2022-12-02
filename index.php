@@ -1,16 +1,4 @@
-<?php 
-  session_start(); 
 
-  if (!isset($_SESSION['loggedin'])) {
-    $_SESSION['msg'] = "You must log in first";
-    header('location: login.html');
-  }
-  if (isset($_GET['logout'])) {
-    session_destroy();
-    unset($_SESSION['loggedin']);
-    header("location: login.html");
-  }
-?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
