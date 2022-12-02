@@ -19,7 +19,7 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="registration.html">registration</a></li>
-                <li><a href="https://soilapp.herokuapp.com/soil.txt">Soil Moisture</a></li>
+                <li><a href="soil.txt">Soil Moisture</a></li>
             </ul>
             <h1 class="logo">SoilApp</h1>
         </div>
