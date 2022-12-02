@@ -1,5 +1,5 @@
 <?php 
-session_start();
+
 $servername = "sql6.freemysqlhosting.net";
 $username = "sql6582103";
 $password = "P521npUsUF";
