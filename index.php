@@ -8,7 +8,7 @@
   if (isset($_GET['logout'])) {
     session_destroy();
     unset($_SESSION['loggedin']);
-    header("location: login.php");
+    header("location: login.html");
   }
 ?>
 <html lang="en">
