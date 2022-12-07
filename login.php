@@ -5,7 +5,7 @@ $username = "bff0c0ff38cdb9";
 $password = "f6afcbcf";
 
 // Create connection to the database
-  $conn = new mysqli($servername, $username, $password,'sql6582103');
+  $conn = new mysqli($servername, $username, $password,'heroku_ae501d3ce4b65a5');
 
 // Check connection
 if ($conn->connect_error) {
