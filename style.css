@@ -10,9 +10,6 @@
     font-size: 62.5%;
 }
 
-.data{
-    margin-top: 70px;
-}
 .navbar input[type="checkbox"],
 .navbar .hamburger-lines{
     display: none;
