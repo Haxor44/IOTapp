@@ -1,16 +1,4 @@
-<?php 
-  session_start(); 
 
-  if (!isset($_SESSION['name'])) {
-    $_SESSION['msg'] = "You must log in first";
-    header('location: login.php');
-  }
-  if (isset($_GET['logout'])) {
-    session_destroy();
-    unset($_SESSION['name']);
-    header("location: login.php");
-  }
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,6 +26,9 @@
                  <div class="button">
                 <input  type="submit" value="Login" name="login">
             </div>  
+              OR  
+                <span><a href="index.php">Home </a></span> ||
+            <span><a href="registration.html">Create Account</a></span>
         </form>
      </div>
 </body>
