@@ -2,7 +2,7 @@
 
 
 // connect to the database
-$db = mysqli_connect('sql6.freemysqlhosting.net', 'sql6582103', 'P521npUsUF', 'sql6582103');
+$db = mysqli_connect('us-cdbr-east-06.cleardb.net', 'bff0c0ff38cdb9', 'f6afcbcf', 'heroku_ae501d3ce4b65a5');
 
 // REGISTER USER
 if (isset($_POST['register'])) {
