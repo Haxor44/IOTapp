@@ -26,7 +26,7 @@
       <a class="filter__item">month</a>
       <a class="filter__item">year</a>
     </div>
-    <button>Log out</button>
+    <button><a href="login.html">Log Out</a></button>
   </div>
   <div class="pill-wrapper">
     <div class="pill">
